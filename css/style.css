@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root{
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;    
+    --cor-terciaria: #22D4FD;
+
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 2% 0 0 15%; /* Isso fará com que o conteudo se alinhe na vertical e na esquerda */
+}
+
+.cabecalho-menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho-menu-link{
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    font-weight: 550;
+    font-size: 1.5rem;
+    color: var(--cor-terciaria);    
+}
+
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+    padding: 9% 15%;
+}
+
+.apresentacao-conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.imagem {
+    width: 38%;    
+}
+
+.apresentacao-titulo {
+    font-size: 2.125rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-style: normal;
+    width: auto;
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao-texto {
+    font-size: 1.3125rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    }
+
+.apresentacao-botao {    
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 75%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    padding: 15px 0;
+    text-decoration: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    }
+
+.apresentacao-links-subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.4375rem;
+}
+
+.apresentacao-botao:hover{
+    background-color: #272727;
+    cursor: pointer;    
+}
+
+.rodape{
+    color: var(--cor-primaria);
+    background: var(--cor-terciaria);
+    margin: 0;
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.3125rem;
+    font-weight: 400;
+}
+
+@media (max-width: 960px){
+    .cabecalho{
+        padding: 10%;         
+    }
+
+    .cabecalho-menu{
+        justify-content: center;        
+    }
+
+    .apresentacao{
+        /* Ele vai fazer com que o main, que diferente do section (não engloba a imagem), fique 
+        em forma de coluna */
+        flex-direction: column-reverse;
+
+        /* Se aumentamos esse padding, o conteúdo fica menor pois isso é do elemento pai, ou seja
+        quanto maior for o tamanho (padding) do elemento pai, menos espaço vai sobrar pro filho, por isso
+        o conteudo da apresentação ficaria menor */
+        padding: 5%;
+    }
+
+    .apresentacao-conteudo{
+        /* Aqui ele usará todo espaço disponível para ele, como se não houvesse margem*/        
+        width: auto;
+        margin: 0 10%;
+    }
+
+}
